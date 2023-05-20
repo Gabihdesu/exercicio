@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <span class="relativo">Saiba mais</span>
+    <h1>Primeiro Conteúdo</h1>
+  </div>
+  
+  <div> 
+    <span class="relativo">Saiba mais</span>
+    <h1>Segundo Conteúdo</h1>
+  </div>
+
+  <h1>Terceiro Conteúdo</h1>
+  <div class="fixo">
+    <p>Neste site usamos cookies.</p>
+  </div>
+
+  <div class="z-index">
+    <h2>Elemento 1</h2>
+    <h2 class="index1">Elemento 2</h2>
+    <h2>Elemento 3</h2>
+    <h2 class="index2">Elemento 4</h2>
+    <h2>Elemento 5</h2>
+  </div>
+  
+
+  <style>
+    .fixo {
+      position: fixed; /*posição fixa em relação ao elemento pai*/
+      bottom: 40px;
+      left: 40px;
+      text-align: right;
+      z-index: 9999;
+    }
+
+    h1 {
+      border: 2px solid #ccc;
+      padding: 20px 20px 500px 20px;
+    }
+
+    p {
+      background: #e7e7e7;
+      border: 1px solid #d7d7d7;
+      padding: 20px;
+      margin: 0px;
+      font-size: 20px;
+    }
+
+    .relativo {
+      position: relative; /*posição relativa em relação ao elemento pai*/
+      top: -20px;
+    }
+    span {
+      background: #e7e7e7;
+      border: 1px solid #d7d7d7;
+      padding: 10px;
+    }
+    div {
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .z-index {
+      display: grid;
+      place-self: end;
+      text-align: right;
+    }
+
+    h2 {
+      margin: 0px;
+      padding: 10px;
+      background: lightblue;
+    }
+
+    .index1 {
+      position: relative;
+      background: greenyellow;
+      top: 20px;
+      z-index: 1;
+    }
+
+    .index2 {
+      position: relative;
+      background: lightcoral;
+      top: -10px;
+      z-index: 3;
+    }
+
+</style>
+
+</body>
+</html>
