@@ -8,8 +8,15 @@
 </head>
 
 <style>
-  
+
+  .header {
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+  }
+
   .menu a {
+    display: block;
     color: black;
     text-decoration: none;
     text-transform: uppercase;
@@ -27,6 +34,7 @@
     gap: 1.25rem; /*20px*/ 
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   ul {
@@ -35,8 +43,7 @@
     padding: 0rem;
   }
 
-
-  body, header {
+  body {
     background: #f7f7f7;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -124,10 +131,13 @@
   }
 
   .rodape {
-    width: 100vw;
     background: white;
     padding: 2.5rem; /*40px*/ 
     box-sizing: border-box;
+  }
+
+  footer {
+    width: 100%;
   }
 
   .rodape p{
@@ -160,6 +170,59 @@
     font-size: 1.25rem;
   }
 
+  /* Responsivo */
+
+  /* Tablet */ 
+  @media (min-width: 600px) and (max-width: 980px) {
+    .conteudo-principal {
+      max-width: 50rem;
+    }
+
+    .vantagens-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.6rem; 
+    }
+    .vantagens-item p {
+      font-size: 1rem;
+    }
+    .onda {
+      font-size: 2rem; 
+    }
+
+    body {
+      gap: 3rem;
+      margin-top: 30px;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+/* celular / smartphone*/
+@media (min-width:300px) and (max-width: 640px) {
+
+  .conteudo-principal {
+      grid-template-columns: 1fr;
+      max-width: 25rem;
+    }
+
+    .onda {
+      font-size: 2rem; 
+    }
+    
+    body{
+      gap: 3rem;
+      margin-top: 30px;
+    }
+
+    .introducao h1::after {
+      content: none;
+    }
+
+}
 </style>
 
 <body>
@@ -183,7 +246,7 @@
           <p>A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios da marca.</p>
           <p><a href="/">ver mais</a></p>
         </div> 
-        <img src="/img/bici.jpg" alt="Bicicleta preta"> 
+        <img id="bici" src="/img/bici.jpg" alt="Bicicleta preta"> 
       </article>  
 
       <article class="conteudo-principal">  
