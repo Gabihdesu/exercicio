@@ -14,22 +14,34 @@
     text-decoration: none;
     text-transform: uppercase;
     background: white;
-    padding: 14px 30px;
+    padding: 0.87rem 1.87rem; /*14px 30px*/ 
     text-align: center;
+    border: solid 0.13rem transparent; /*2px*/
   }
   
+  .menu a:hover {
+    border-color: #ee2211;  
+    border-radius: 0.3rem; /*5px*/ 
+  }
   .menu {
-    gap: 20px;
+    gap: 1.25rem; /*20px*/ 
     display: flex;
     flex-wrap: wrap;
   }
 
-  body {
+  ul {
+    list-style: none;
+    margin: 0rem;
+    padding: 0rem;
+  }
+
+
+  body, header {
     background: #f7f7f7;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
-    gap: 60px;
+    gap: 4.2rem;
     justify-items: center;
     margin-top: 50px;
   }
@@ -46,137 +58,166 @@
   .conteudo-principal {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
+    max-width: 62.5rem; /*1000px*/
   }
 
   .introducao {
     text-align: right;
-    padding: 30px;
+    padding: 1.9rem;
     background: white;
     position: relative;
     display: grid;
     align-content: center;
   }
+  .introducao h1 {
+    font-size: 2rem;
+  }
 
   .introducao p {
-    font-size: 20px;
-    line-height: 25px;
-    padding: 10px;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    padding: 0.6rem;
+    margin-bottom: 1.25rem; /*20px*/
   }
 
   .introducao h1 {
-    padding: 20px;
-  }
-
-  .detalhe {
-    content: "";
-    background: #ee2211;
-    display: blcok;
-    width: 60px;
-    height: 4px;
-    position: absolute;
-    top: 30px;
-    right: -30px;
-    z-index: 1;
+    padding: 1.25rem; /*20px*/
   }
 
   .introducao a {
     text-decoration: none;
     color: white;
     background: #ee2211;
-    padding: 15px 30px;
-    border-radius: 5px;
+    padding: 1rem 2rem;
+    border-radius: 0.3rem; /*5px*/
     text-transform: uppercase;
   }
-  
-  h2 {
-    text-align: right;
-    padding: 40px;
-    font-size: 60px;
-    color: #c6c6c6;
-    text-transform: uppercase;
+
+  .introducao a:hover {
+    background: #900;
+  }
+
+  .introducao h1::after {
+    content: "";
+    background: #ee2211;
+    display: blcok;
+    width: 3.7rem;  /*60px*/
+    height: 0.25rem;  /*3px*/
+    position: absolute;
+    top: 2rem;
+    right: -2rem;
+    z-index: 1;
+  }
+
+  .onda {
     align-items: center;
     display: grid;
+    font-size: 2.8rem; /*45px*/
+    text-align: right;
+    color: #c6c6c6;
+    text-transform: uppercase;
+  }
+
+  .onda h2{
+    background: url("./img/onda.svg");
+    padding: 2rem;
   }
 
   .rodape {
-    width: 100%;
+    width: 100vw;
     background: white;
-    padding: 40px;
+    padding: 2.5rem; /*40px*/ 
     box-sizing: border-box;
   }
 
   .rodape p{
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem; /*20px*/
   }
 
   .vantagens {
     background: white;
-    padding: 40px;
+    padding: 2.5rem; /*40px*/ 
   }
 
   .vantagens-item {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 10px 20px;
-    padding: 20px;
+    gap: 0.6rem 1.25rem; /*10px 20px*/ 
+    padding: 1.25rem; /*20px*/ 
+  }
+
+  .vantagens-item:hover {
+    border-left: #900 solid 0.25rem; /*4px*/ 
+  }
+
+  .vantagens-item:nth-child(odd) {
+    background-color: #f7f7f7 ;
   }
 
   .vantagens-item p {
     grid-column: 2;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
 </style>
 
 <body>
-  <img src="/img/bikcraft.svg">
+  <header class="header">
+    <img src="/img/bikcraft.svg">
+   
+     <nav  aria-label="primaria"> 
+      <ul class="menu">
+        <li><a href="/">Sobre</a></li>
+        <li><a href="/">Produtos</a></li>
+        <li><a href="/">Lojas</a></li>
+        <li><a href="/">Contato</a></li>
+      </ul>
+     </nav>
+   </header>
 
-  <div class="menu"> 
-      <a href="/">Sobre</a>
-      <a href="/">Produtos</a>
-      <a href="/">Lojas</a>
-      <a href="/">Contato</a>
-  </div>
+  <main>
+      <article class="conteudo-principal">
+        <div class="introducao">  
+          <h1>Bicicletas Feitas a Mão</h1>
+          <p>A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios da marca.</p>
+          <p><a href="/">ver mais</a></p>
+        </div> 
+        <img src="/img/bici.jpg" alt="Bicicleta preta"> 
+      </article>  
 
-  <div class="conteudo-principal">
-    <div class="introducao">
-      <span class="detalhe"></span>
-      <h1>Bicicletas Feitas a Mão</h1>
-      <p>A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios da marca.</p>
-      <p><a href="/">ver mais</a></p>
-    </div>  
-
-      <img src="/img/bici.jpg" alt="Bicicleta preta">
-
-      <h2>Vantagens Bikcraft</h2>
-
-      <div class="vantagens">
-        <div class="vantagens-item">
-          <img src="/img/eletrica.svg" alt="eletrica">
-          <h3>Motor Elétrico</h3>
-          <p>Permite você viajar distâncias inimaginaveis com a sua bike.</p>
+      <article class="conteudo-principal">  
+        <div class="onda">
+          <h2>Vantagens Bikcraft</h2>
         </div>
 
-        <div class="vantagens-item">
-          <img src="/img/velocidade.svg" alt="velocidade">
-          <h3>40 km/h</h3>
-          <p>A mais rápida bicicleta elétrica disponível hoje no mercado.</p>
-        </div>
+        <div class="vantagens">
+          <div class="vantagens-item">
+            <img src="/img/eletrica.svg" alt="eletrica">
+            <h3>Motor Elétrico</h3>
+            <p>Permite você viajar distâncias inimaginaveis com a sua bike.</p>
+          </div>
 
-        <div class="vantagens-item">
-          <img src="/img/rastreador.svg" alt="rastreador">
-          <h3>Rastreador</h3>
-          <p>Rastreador e sistema anti-furto para garantir o seu sossego.</p>
-        </div>
-      </div>  
-  </div>
+          <div class="vantagens-item">
+            <img src="/img/velocidade.svg" alt="velocidade">
+            <h3>40 km/h</h3>
+            <p>A mais rápida bicicleta elétrica disponível hoje no mercado.</p>
+          </div>
 
-      <div class="rodape">
-        <p>Bikcraft. Alguns Direitos Reservados.</p>
-      </div>
+          <div class="vantagens-item">
+            <img src="/img/rastreador.svg" alt="rastreador">
+            <h3>Rastreador</h3>
+            <p>Rastreador e sistema anti-furto para garantir o seu sossego.</p>
+          </div> 
+        </div>  
+      </article>  
+    </main>
+
+    <footer>
+        <div class="rodape">
+          <p>Bikcraft. Alguns Direitos Reservados.</p>
+        </div>
+    </footer>    
 </body>
 
 </html>
